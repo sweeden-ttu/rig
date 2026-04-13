@@ -1,0 +1,20 @@
+---
+description: Canonical default LLM id for all tools, scripts, and MCP calls unless the user overrides.
+alwaysApply: true
+---
+
+# Default model — `unrestricted-knowledge-will-not-refuse-15b`
+
+Use **`unrestricted-knowledge-will-not-refuse-15b`** as the **default model identifier everywhere** unless the user explicitly names a different model for a specific call.
+
+## Where to apply
+
+- **LM Studio / OpenAI-compatible local**: `LMSTUDIO_MODEL`, `OPENAI_MODEL`, and any `model` / `modelID` parameter in API or CLI examples.
+- **MCP** (lms-mcp chat, chat_session, complete, embeddings): pass `unrestricted-knowledge-will-not-refuse-15b` when a model argument exists and no override is given.
+- **OpenCode**: prefer this `modelID` when available for the chosen provider.
+- **Rig examples** (`website_search_lmstudio_agent`, `lmstudio_experiment_subagent_orchestrator`, tests): default `LMSTUDIO_MODEL` documentation and fallbacks to this id.
+- **Shell snippets**: `export LMSTUDIO_MODEL=unrestricted-knowledge-will-not-refuse-15b`.
+
+## Overrides
+
+If a provider catalog does not list this id, report once and use the nearest allowed model only for that environment; keep this id as the documented default.

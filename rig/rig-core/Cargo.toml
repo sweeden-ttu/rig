@@ -179,3 +179,10 @@ required-features = ["derive"]
 [[example]]
 name = "vector_search_ollama"
 required-features = ["derive"]
+
+[[example]]
+name = "website_search_lmstudio_agent"
+required-features = ["derive"]
+
+[[example]]
+name = "lmstudio_experiment_subagent_orchestrator"

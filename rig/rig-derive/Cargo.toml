@@ -27,6 +27,8 @@ serde = { workspace = true }
 serde_json = { workspace = true }
 tokio = { workspace = true, features = ["full"] }
 tracing-subscriber = { workspace = true }
+reqwest = { workspace = true, features = ["rustls"] }
+anyhow = { workspace = true }
 
 [[example]]
 name = "simple"
@@ -43,3 +45,7 @@ path = "examples/rig_tool/full.rs"
 [[example]]
 name = "async_tool"
 path = "examples/rig_tool/async_tool.rs"
+
+[[example]]
+name = "website_search_derive"
+path = "examples/rig_tool/website_search_derive.rs"

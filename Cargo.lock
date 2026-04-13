@@ -9453,11 +9453,13 @@ dependencies = [
 name = "rig-derive"
 version = "0.1.12"
 dependencies = [
+ "anyhow",
  "convert_case",
  "deluxe",
  "indoc",
  "proc-macro2",
  "quote",
+ "reqwest 0.13.2",
  "rig-core",
  "serde",
  "serde_json",
